@@ -12,6 +12,7 @@ script:
 - xbuild
 deploy:
   provider: heroku
+  buildpack: https://github.com/friism/heroku-buildpack-mono.git
   api_key:
     secure: BHISYFIoCVjf7BYR4Q32/EUbRr3q++GHPA/S/6SWeMNHKH59DjjevJSToJHFwkc29Q4CMKewWiEwzI2UnUMJ1ZcIvOCUbjyhA0kQ41dcG/GUwcrx3G/kz91XOidpi6G4ghXS4TT96KM7ppfMsORgqt7zYwGBjMdP1Q9Zxpgxe1g=
   app: usemono

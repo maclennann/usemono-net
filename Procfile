@@ -1,1 +1,1 @@
-web: mono TopShelfTest.exe
+web: mono usemono.exe
