@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>UseMono.NET</title>
+    <link rel="stylesheet" type="text/css" href="Content/bootstrap.min.css" />
+</head>
+    <body>
+        
+        <!-- Static navbar -->
+        <div class="navbar navbar-default navbar-static-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">UseMono.NET</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="/what#content">What?</a></li>
+                        <li><a href="/Why#content">Why?</a></li>
+                        <li><a href="/How#content">How?</a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </div>
+        <div class="container">
+        <div class="page-header">
+    <h1>UseMono.NET</h1>
+    <p class="lead">Broaden Your Application's Horizons</p>
+</div>
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-md-8">
+            <ul>
+            	<li>
+            		What?
+            		<ul>
+	            		<li><a href="/what#whatis">What is Mono?</a></li>
+	            		<li><a href="/what#whois">Who is Using Mono?</a></li>
+            		</ul>
+            	</li>
+				<li>
+					Why?
+            		<ul>
+	            		<li><a href="/why#shouldi">Why Should I Consider Mono?</a></li>
+	            		<li><a href="/why#myths">Mono Myths</a></li>
+            		</ul>
+            	</li>
+				<li>
+					How?
+            		<ul>
+	            		<li><a href="/how#howdoi">How do I get started?</a></li>
+	            		<li>How do I test my exisiting application for compatibility?</li>
+            		</ul>
+            	</li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            [TODO: Find an image to put here!]
+        </div>
+    </div>
+</div>
+    		<a id="content"></a>
+            @RenderBody()
+        </div>
+        <hr/>
+        <center>
+            <div class="footer"><p class="text-muted">Made In MonoDevelop and Run On Mono/Heroku - By Norm MacLennan.</p></div>
+        </center>
+        
+        
+        
+        
+        
+        <a href="https://github.com/maclennann/csharp-crossplat-service-demo"><img style="position: absolute; top: 0; right: 0; border: 0; z-index:10000;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+        
+
+        <script src="Content/jquery-1.9.0.min.js"></script>
+        <script src="Content/bootstrap.min.js"></script>
+        
+    </body>
+</html>
