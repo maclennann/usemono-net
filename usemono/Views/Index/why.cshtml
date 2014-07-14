@@ -5,10 +5,12 @@
 	    <a id="shouldi"></a>
 	    <h3>Why Should I Think About Mono?</h3>
 	    <p>So if Mono compatibility is so good, why should I have to think about Mono compatibility when I'm developing?</p>
+
 	    <p>Well, <a href="http://mono-project.com/Compatibility">compatibility is great</a>, but it's not perfect. Many open source projects that use C# ignore
 	    Mono completely and set up build processes incompatible with Unix/Mono users or use parts of .NET that Mono does not yet support. This means a smaller
 	    pool of potential contributers (or at least a larger barrier to contribution) and limits the size of the .NET Open Source Community.</p>
-		<p>In list format:</p>
+
+		<p>You may want to use Mono (or test for compatibility if):</p>
         <ul>
             <li>You run an open source project and want as large a pool of contributers as possible.</li>
             <li>You want as large a pool of users as possible.</li>
@@ -16,13 +18,16 @@
             <li>You want to make use of Linux-based cloud offerings like Heroku.</li>
             <li>You want to write .NET code from the comfort of your Macbook and OS X.</li>
         </ul>
+
         <h4>...But Linux is hard!</h4>
         <p>Linux is certainly a different environment than Windows, and many .NET developers may not be familiar with it.
         However, Linux is used to power a significant portion of the Internet - and for good reason. Linux has seen many great new (or re-vamped) tools
         like containerization with Docker, or Configuration Management with Puppet/Chef/Ansible/Salt/etc. Windows support is at best uneven with many of these tools.
         </p>
+
         <p>Learning how to work in a different environment can be a good exercise. And even if you don't use Mono or Linux full-time, many of the ideas you pick up along the way
         can still be applied to Windows/.NET environments.</p>
+
         <p>In short, this isn't about Windows vs Linux - this is about options, compatibility, and cooperation.</p>
     </div>
     <div class="col-md-12">
@@ -36,6 +41,7 @@
 	    		click through the list shows just how much of the framework is implemented.
 	    		</p>
     		</li>
+
 			<li>
 				It's difficult to test my application for Mono compatibility:<br/>
 				<p>False. Mono provides an analysis library called <a href="http://mono-project.com/Gendarme">Gendarme</a> that allows developers to easily test their assemblies for Mono compatibility (as well as other best practices).
@@ -43,13 +49,14 @@
 				<p>For a more complete test, the advent of cheap development environments through <a href="http://www.vagrantup.com/">Vagrant</a> or <a href="http://www.docker.com/">Docker</a>
 				affords the developer an opportunity to test applications for Mono compatibility during development, or as part of automated integration testing.</p>
 			</li>
+
 	        <li>
 	            It's difficult to install a recent version of Mono:<br/>
 	            <p>Mostly false. Granted, most larger Linux distros provide wildly-out-of-date versions of mono from their default repositories. Ubuntu users can choose from several PPAs, such as
 	                <a href="https://launchpad.net/~ermshiperete/+archive/ubuntu/monodevelop">ermshiperete/monodevelop</a>. Fedora, CentOS, or Debian users can find a repository on the <a href="http://software.opensuse.org/download/package?project=home:tpokorra:mono&package=monodevelop-opt">OpenSuSE Build System</a>.</p>
 	            <p>Additionally, <a href="https://github.com/maclennann/usemono-net/wiki/Getting-Started-with-Mono">this Puppet module</a> will install a modern version of Mono on pretty much any OS.</p>
-
 	        </li>
+            
             <li>
                 MonoDevelop is terrible. You can't write web projects in MonoDevelop. NuGet doesn't work in MonoDevelop<br />
                 <p>
@@ -60,6 +67,7 @@
                     via a plugin.
                 </p>
             </li>
+
 			<li>
 				Microsoft is going to sue Mono and Xamarin out of existence!<br/>
 				<p>
