@@ -42,13 +42,21 @@
 				<p>For a more complete test, the advent of cheap development environments through <a href="http://www.vagrantup.com/">Vagrant</a> or <a href="http://www.docker.com/">Docker</a>
 				affords the developer an opportunity to test applications for Mono compatibility during development, or as part of automated integration testing.</p>
 			</li>
-			<li>
-				It's difficult to install a recent version of Mono:<br/>
-				<p>Mostly false. Granted, most larger Linux distros provide wildly-out-of-date versions of mono from their default repositories. Ubuntu users can choose from several PPAs, such as
-				<a href="https://launchpad.net/~ermshiperete/+archive/ubuntu/monodevelop">ermshiperete/monodevelop</a>. Fedora, CentOS, or Debian users can find a repository on the <a href="http://software.opensuse.org/download/package?project=home:tpokorra:mono&package=monodevelop-opt">OpenSuSE Build System</a>.</p>
-				<p>Additionally, this Puppet module will install a modern version of Mono on pretty much any OS. TODO: Open source and link Module</p>
+	        <li>
+	            It's difficult to install a recent version of Mono:<br/>
+	            <p>Mostly false. Granted, most larger Linux distros provide wildly-out-of-date versions of mono from their default repositories. Ubuntu users can choose from several PPAs, such as
+	                <a href="https://launchpad.net/~ermshiperete/+archive/ubuntu/monodevelop">ermshiperete/monodevelop</a>. Fedora, CentOS, or Debian users can find a repository on the <a href="http://software.opensuse.org/download/package?project=home:tpokorra:mono&package=monodevelop-opt">OpenSuSE Build System</a>.</p>
+	            <p>Additionally, this Puppet module will install a modern version of Mono on pretty much any OS. TODO: Open source and link Module</p>
 
-			</li>
+	        </li>
+            <li>
+                Mono Develop is terrible. You can't write web projects in Mono Develop. Nuget doesn't work in monodevelop<br />
+                <p>
+                    False. The Mono develop IDE is outstanding. Mono Develop provides its own version of <a href="http://www.jetbrains.com/resharper/">resharper</a> 
+                    The IDE has full support for all C# features, great unit tests support, and Git support that rivals even the best IDE's.
+                     Mono Develop has templates for major web applications, and the latest version released with integrated support for nuget.
+                </p>
+            </li>
     	</ul>
     </div>
 </div>
