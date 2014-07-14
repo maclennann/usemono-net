@@ -8,23 +8,8 @@ namespace usemono.Modules
         {
             Get["/"] = parameters =>
             {
-				return View["what"];
+				return View["index"];
             };
-
-			Get["/what"] = parameters =>
-			{
-				return View["what"];
-			};
-
-			Get["/why"] = parameters =>
-			{
-				return View["why"];
-			};
-
-			Get["/how"] = parameters =>
-			{
-				return View["how"];
-			};
         }
     }
 }
