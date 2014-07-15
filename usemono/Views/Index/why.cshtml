@@ -1,16 +1,18 @@
 ﻿<div class="row">
-	<a id="why"></a>
+    <a id="why"></a>
     <h2>Why?</h2>
     <div class="col-md-12">
-	    <a id="shouldi"></a>
-	    <h3>Why Should I Think About Mono?</h3>
-	    <p>So if Mono compatibility is so good, why should I have to think about Mono compatibility when I'm developing?</p>
+        <a id="shouldi"></a>
+        <h3>Why Should I Think About Mono?</h3>
+        <p>So if Mono compatibility is so good, why should I have to think about Mono compatibility when I'm developing?</p>
 
-	    <p>Well, <a href="http://mono-project.com/Compatibility">compatibility is great</a>, but it's not perfect. Many open source projects that use C# ignore
-	    Mono completely and set up build processes incompatible with Unix/Mono users or use parts of .NET that Mono does not yet support. This means a smaller
-	    pool of potential contributers (or at least a larger barrier to contribution) and limits the size of the .NET Open Source Community.</p>
+        <p>
+            Well, <a href="http://mono-project.com/Compatibility">compatibility is great</a>, but it's not perfect. Many open source projects that use C# ignore
+            Mono completely and set up build processes incompatible with Unix/Mono users or use parts of .NET that Mono does not yet support. This means a smaller
+            pool of potential contributers (or at least a larger barrier to contribution) and limits the size of the .NET Open Source Community.
+        </p>
 
-		<p>You may want to use Mono (or test for compatibility if):</p>
+        <p>You may want to use Mono (or test for compatibility if):</p>
         <ul>
             <li>You run an open source project and want as large a pool of contributers as possible.</li>
             <li>You want as large a pool of users as possible.</li>
@@ -20,66 +22,76 @@
         </ul>
 
         <h4>...But Linux is hard!</h4>
-        <p>Linux is certainly a different environment than Windows, and many .NET developers may not be familiar with it.
-        However, Linux is used to power a significant portion of the Internet - and for good reason. Linux has seen many great new (or re-vamped) tools
-        like containerization with Docker, or Configuration Management with Puppet/Chef/Ansible/Salt/etc. Windows support is at best uneven with many of these tools.
+        <p>
+            Linux is certainly a different environment than Windows, and many .NET developers may not be familiar with it.
+            However, Linux is used to power a significant portion of the Internet - and for good reason. Linux has seen many great new (or re-vamped) tools
+            like containerization with Docker, or Configuration Management with Puppet/Chef/Ansible/Salt/etc. Windows support is at best uneven with many of these tools.
         </p>
 
-        <p>Learning how to work in a different environment can be a good exercise. And even if you don't use Mono or Linux full-time, many of the ideas you pick up along the way
-        can still be applied to Windows/.NET environments.</p>
+        <p>
+            Learning how to work in a different environment can be a good exercise. And even if you don't use Mono or Linux full-time, many of the ideas you pick up along the way
+            can still be applied to Windows/.NET environments.
+        </p>
 
         <p>In short, this isn't about Windows vs Linux - this is about options, compatibility, and cooperation.</p>
     </div>
     <div class="col-md-12">
-    	<a id="myths"></a>
-    	<h3>Mono Myths</h3>
-    	<ul>
-    		<li>
-	    		Mono has poor compatibility with .NET:<br/>
-	    		<p>False. Mono has surprisingly-good compatibility with the .NET framework. <a href="http://mono-project.com/Compatibility">At a high level</a>, Mono doesn't support WCF and has limited support for the 4.5 TPL.
-	    		There is also a <a href="http://go-mono.com/status/">Mono Class Status Page</a> that provides compatibility breakdowns at the assmebly level, all the way down to the class level. A quick
-	    		click through the list shows just how much of the framework is implemented.
-	    		</p>
-    		</li>
+        <a id="myths"></a>
+        <h3>Mono Myths</h3>
+        <ul>
+            <li>
+                Mono has poor compatibility with .NET:<br />
+                <p>
+                    False. Mono has surprisingly-good compatibility with the .NET framework. <a href="http://mono-project.com/Compatibility">At a high level</a>, Mono doesn't support WCF and has limited support for the 4.5 TPL.
+                    There is also a <a href="http://go-mono.com/status/">Mono Class Status Page</a> that provides compatibility breakdowns at the assmebly level, all the way down to the class level. A quick
+                    click through the list shows just how much of the framework is implemented.
+                </p>
+            </li>
 
-			<li>
-				It's difficult to test my application for Mono compatibility:<br/>
-				<p>False. Mono provides an analysis library called <a href="http://mono-project.com/Gendarme">Gendarme</a> that allows developers to easily test their assemblies for Mono compatibility (as well as other best practices).
-				So, as a basic test, a developer can run the application through Gendarme to test for basic compatibility without even having Mono installed or a Linux box to test it on.</p>
-				<p>For a more complete test, the advent of cheap development environments through <a href="http://www.vagrantup.com/">Vagrant</a> or <a href="http://www.docker.com/">Docker</a>
-				affords the developer an opportunity to test applications for Mono compatibility during development, or as part of automated integration testing.</p>
-			</li>
+            <li>
+                It's difficult to test my application for Mono compatibility:<br />
+                <p>
+                    False. Mono provides an analysis library called <a href="http://mono-project.com/Gendarme">Gendarme</a> that allows developers to easily test their assemblies for Mono compatibility (as well as other best practices).
+                    So, as a basic test, a developer can run the application through Gendarme to test for basic compatibility without even having Mono installed or a Linux box to test it on.
+                </p>
+                <p>
+                    For a more complete test, the advent of cheap development environments through <a href="http://www.vagrantup.com/">Vagrant</a> or <a href="http://www.docker.com/">Docker</a>
+                    affords the developer an opportunity to test applications for Mono compatibility during development, or as part of automated integration testing.
+                </p>
+            </li>
 
-	        <li>
-	            It's difficult to install a recent version of Mono:<br/>
-	            <p>Mostly false. Granted, most larger Linux distros provide wildly-out-of-date versions of mono from their default repositories. Ubuntu users can choose from several PPAs, such as
-	                <a href="https://launchpad.net/~ermshiperete/+archive/ubuntu/monodevelop">ermshiperete/monodevelop</a>. Fedora, CentOS, or Debian users can find a repository on the <a href="http://software.opensuse.org/download/package?project=home:tpokorra:mono&package=monodevelop-opt">OpenSuSE Build System</a>.</p>
-	            <p>Additionally, <a href="https://github.com/maclennann/usemono-net/wiki/Getting-Started-with-Mono">this Puppet module</a> will install a modern version of Mono on pretty much any OS.</p>
-	        </li>
-            
+            <li>
+                It's difficult to install a recent version of Mono:<br />
+                <p>
+                    Mostly false. Granted, most larger Linux distros provide wildly-out-of-date versions of mono from their default repositories. Ubuntu users can choose from several PPAs, such as
+                    <a href="https://launchpad.net/~ermshiperete/+archive/ubuntu/monodevelop">ermshiperete/monodevelop</a>. Fedora, CentOS, or Debian users can find a repository on the <a href="http://software.opensuse.org/download/package?project=home:tpokorra:mono&package=monodevelop-opt">OpenSuSE Build System</a>.
+                </p>
+                <p>Additionally, <a href="https://github.com/maclennann/usemono-net/wiki/Getting-Started-with-Mono">this Puppet module</a> will install a modern version of Mono on pretty much any OS.</p>
+            </li>
+
             <li>
                 MonoDevelop is terrible. You can't write web projects in MonoDevelop. NuGet doesn't work in MonoDevelop<br />
                 <p>
                     False. The MonoDevelop IDE is outstanding. MonoDevelop provides code inspection and formatting settings and policies that
-                    rival <a href="http://www.jetbrains.com/resharper/">JetBrains Resharper</a>. 
-                    The IDE has full support for all C# features, great unit tests support, and Git support that rivals even the best IDE's. 
+                    rival <a href="http://www.jetbrains.com/resharper/">JetBrains Resharper</a>.
+                    The IDE has full support for all C# features, great unit tests support, and Git support that rivals even the best IDE's.
                     MonoDevelop has templates for major web applications. The lastest version has built-in NuGet support, and earlier versions have support
                     via a plugin.
                 </p>
             </li>
 
-			<li>
-				Microsoft is going to sue Mono and Xamarin out of existence!<br/>
-				<p>
-					Well...probably false. Microsoft can do whatever they want. However, while it is true that <a href="http://www.fsf.org/news/dont-depend-on-mono">Richard Stallman and the FSF distrust Mono</a>, 
-					Microsoft has <a href="http://www.microsoft.com/openspecifications/en/us/programs/community-promise/default.aspx">promised not to make any claims</a> against anyone who is implementing the open ECMA specs covering C# and the CLI. 
-					Additionally, at the //Build/2014 conference, 
-					Microsoft <a href="http://www.dotnetfoundation.org/">created the .NET Open Source Foundation</a>, which is meant to curate and foster the .NET Open Source community, including overseeing 
-					projects like <a href="http://www.dotnetfoundation.org/projects.aspx">the Roslyn compiler and ASP.NET vNEXT</a>. Microsoft seems to be serious about creating and fostering an open and cooperative 
-					community for the .NET ecosystem. You can watch the <a href="http://channel9.msdn.com/Events/Build/2014/9-013">Open Source Panel</a> video from Build for more information. Miguel de Icaza, 
-					founder of the Mono Project and Xamarin (and .NET Foundation Board member) shows up about halfway through.
-				</p>
-			</li>
-    	</ul>
+            <li>
+                Microsoft is going to sue Mono and Xamarin out of existence!<br />
+                <p>
+                    Well...probably false. Microsoft can do whatever they want. However, while it is true that <a href="http://www.fsf.org/news/dont-depend-on-mono">Richard Stallman and the FSF distrust Mono</a>,
+                    Microsoft has <a href="http://www.microsoft.com/openspecifications/en/us/programs/community-promise/default.aspx">promised not to make any claims</a> against anyone who is implementing the open ECMA specs covering C# and the CLI.
+                    Additionally, at the //Build/2014 conference,
+                    Microsoft <a href="http://www.dotnetfoundation.org/">created the .NET Open Source Foundation</a>, which is meant to curate and foster the .NET Open Source community, including overseeing
+                    projects like <a href="http://www.dotnetfoundation.org/projects.aspx">the Roslyn compiler and ASP.NET vNEXT</a>. Microsoft seems to be serious about creating and fostering an open and cooperative
+                    community for the .NET ecosystem. You can watch the <a href="http://channel9.msdn.com/Events/Build/2014/9-013">Open Source Panel</a> video from Build for more information. Miguel de Icaza,
+                    founder of the Mono Project and Xamarin (and .NET Foundation Board member) shows up about halfway through.
+                </p>
+            </li>
+        </ul>
     </div>
 </div>

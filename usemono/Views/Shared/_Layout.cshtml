@@ -5,46 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>UseMono.NET</title>
     <link rel="stylesheet" type="text/css" href="~/Content/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="~/Content/layout.css"/>
+    <link rel="stylesheet" type="text/css" href="~/Content/layout.css" />
     @RenderSection("styles", false)
     <script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-	  ga('create', 'UA-52785619-1', 'auto');
-	  ga('send', 'pageview');
+        ga('create', 'UA-52785619-1', 'auto');
+        ga('send', 'pageview');
 
-	</script>
+    </script>
 
 </head>
-    <body>
-        
-        @Html.Partial("Shared/Navbar.cshtml")
-        <div class="container">
+<body>
+
+    @Html.Partial("Shared/Navbar.cshtml")
+    <div class="container">
         <div class="page-header">
-    <h1>UseMono.NET</h1>
-    <p class="lead">Broaden Your Application's Horizons</p>
-</div>
-    		<a id="content"></a>
-            @RenderBody()
+            <h1>UseMono.NET</h1>
+            <p class="lead">Broaden Your Application's Horizons</p>
         </div>
-        <hr/>
-        <center>
-            <div class="footer"><p class="text-muted">Made In MonoDevelop and Run On Mono/Heroku - By Norm MacLennan.</p>
-            <p>Neither I nor this website are affiliated with Mono or Xamarin in any way. Just a fan.</p></div>
-        </center>
-        
-        
-        
-        
-        <a href="https://github.com/maclennann/usemono-net" class="visible-lg"><img style="position: absolute; top: 0; right: 0; border: 0; z-index:10000;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
-        
+        <a id="content"></a>
+        @RenderBody()
+    </div>
+    <hr />
+    <center>
+        <div class="footer">
+            <p class="text-muted">Made In MonoDevelop and Run On Mono/Heroku - By Norm MacLennan.</p>
+            <p>Neither I nor this website are affiliated with Mono or Xamarin in any way. Just a fan.</p>
+        </div>
+    </center>
 
-        <script src="Content/jquery-1.9.0.min.js"></script>
-        <script src="Content/bootstrap.min.js"></script>
-        @RenderSection("Scripts", false)
+    <a href="https://github.com/maclennann/usemono-net" class="visible-lg"><img style="position: absolute; top: 0; right: 0; border: 0; z-index:10000;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
 
-    </body>
+
+    <script src="Content/jquery-1.9.0.min.js"></script>
+    <script src="Content/bootstrap.min.js"></script>
+    @RenderSection("Scripts", false)
+
+</body>
 </html>
