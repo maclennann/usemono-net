@@ -1,14 +1,14 @@
-﻿using System;
-using Nancy.Hosting.Self;
+﻿using Nancy.Hosting.Self;
+using System;
 using Topshelf;
 
 namespace usemono
 {
-    class Program
+    internal class Program
     {
         private const int DEFAULT_PORT = 3579;
 
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             int port;
 
@@ -20,7 +20,7 @@ namespace usemono
                 x.UseLinuxIfAvailable();
                 x.Service<NancyApp>(s =>
                 {
-                    s.ConstructUsing(name => new NancyApp("http://localhost:"+port));
+                    s.ConstructUsing(name => new NancyApp("http://localhost:" + port));
                     s.WhenStarted(tc => tc.Start());
                     s.WhenStopped(tc => tc.Stop());
                 });
@@ -28,7 +28,7 @@ namespace usemono
         }
     }
 
-    class NancyApp
+    internal class NancyApp
     {
         private readonly NancyHost _host;
 
